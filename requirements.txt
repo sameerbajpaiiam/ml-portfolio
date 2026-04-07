@@ -5,4 +5,4 @@ xgboost
 tensorflow-cpu
 joblib
 opencv-python-headless
-huggingface-hub
+huggingface_hub
