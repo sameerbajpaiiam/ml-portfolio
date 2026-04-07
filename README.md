@@ -1,7 +1,6 @@
 # Machine Learning Portfolio Web App
 
-**Live Demo** → [🚀 Open the Streamlit App]([https://your-app-name.streamlit.app](https://ml-portfolio-sgtw4ahc9awydporcrwmxh.streamlit.app/))  
-*(Replace with your actual Streamlit Cloud URL after deploying `app.py`)*
+**Live Demo** → [🚀 Open the Streamlit App](https://ml-portfolio-sgtw4ahc9awydporcrwmxh.streamlit.app/)
 
 Interactive web application that showcases **two production-ready end-to-end ML projects** with real-time inference.
 
