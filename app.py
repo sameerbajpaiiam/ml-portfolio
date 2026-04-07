@@ -108,8 +108,8 @@ elif app_mode == "Casting Defect Detection":
                 pred  = model.predict(img_array)
 
                 score = pred[0][0]
-                label = "DEFECTIVE" if score > 0.5 else "OK"
-                confidence = score if label == "DEFECTIVE" else 1 - score
+                label = "DEFECTIVE" if score <= 0.5 else "OK"
+                confidence = 1-score if label == "DEFECTIVE" else score
 
                 if label == "DEFECTIVE":
                     st.error(f"Status: {label} (Confidence: {confidence:.2%})")
