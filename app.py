@@ -61,7 +61,13 @@ if app_mode == "Air Quality Analysis":
             # ... assign other values ...
             
             prediction = model.predict(features)
-            st.success(f"Predicted Value: {prediction[0]}")
+            temp,rh,ah = prediction[0]
+            st.success(
+                f"**Results:**\n"
+                f"- 🌡️ Temperature: {temp:.2f} °C\n"
+                f"- 💧 Relative Humidity: {rh:.2f} %\n"
+                f"- 🌫️ Absolute Humidity: {ah:.4f} g/m³"
+)
         else:
             st.error(f"Model file {path} not found in directory.")
 
