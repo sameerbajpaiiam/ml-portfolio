@@ -6,4 +6,4 @@ tensorflow-cpu
 joblib
 opencv-python-headless
 huggingface_hub
-sklearn
+scikit-learn
