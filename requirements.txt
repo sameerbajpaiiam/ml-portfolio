@@ -5,4 +5,3 @@ xgboost
 tensorflow
 joblib
 opencv-python-headless
-seaborn
