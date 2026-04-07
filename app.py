@@ -5,6 +5,7 @@ import tensorflow as tf
 import xgboost as xgb
 import joblib
 import os
+from huggingface_hub import hf_hub_download
 
 # Page Config
 st.set_page_config(page_title="ML Models", layout="wide")
