@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+xgboost
+tensorflow
+joblib
+opencv-python-headless
