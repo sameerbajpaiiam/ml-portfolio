@@ -54,11 +54,9 @@ if app_mode == "Air Quality Analysis":
             else:
                 model = joblib.load(path)
             
-            # Create input array (Ensure the shape matches your training data)
-            # Placeholder for the rest of your features
+            # Creating input array
             features = np.zeros((1, 13)) 
             features[0, :] = month, day_of_week, hour,co_gt, pt08_s1_co, c6h6_gt, nmhc_gt,  pt08_s2_nmhc,nox_gt, pt08_s3_nox, no2_gt, pt08_s4_no2, pt08_s5_o3
-            # ... assign other values ...
             
             prediction = model.predict(features)
             temp,rh,ah = prediction[0]
@@ -82,11 +80,11 @@ elif app_mode == "Casting Defect Detection":
     def load_cv_model(architecture):
         if architecture == "Custom CNN":
             model_path = hf_hub_download(
-                repo_id="sameerbajpaiiam/custom",   # 🔁 replace this
-                filename="custom_cnn.h5"                  # 🔁 replace this
+                repo_id="sameerbajpaiiam/custom",
+                filename="custom_cnn.h5"
             )
         else:
-            model_path = 'mobilenet_v2.h5'                # 🔁 replace this
+            model_path = 'mobilenet_v2.h5'
             
         return tf.keras.models.load_model(model_path)
 
