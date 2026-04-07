@@ -45,7 +45,7 @@ if app_mode == "Air Quality Analysis":
         pt08_s5_o3= st.number_input("PT08.S5 (O3)", value=1000.0)
 
     if st.button("Predict"):
-        path = 'xgb_model.json' if model_type == "XGBoost" else 'rf_model.pkl'
+        path = 'xgb_model.json' if model_type == "XGBoost" else 'random_forest_model.joblib'
         
         if os.path.exists(path):
             if model_type == "XGBoost":
